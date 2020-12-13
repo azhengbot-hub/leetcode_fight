@@ -20,7 +20,7 @@ func predictPartyVictory(senate string) string {
 		if radiant[0] < dire[0] {
 			radiant = append(radiant, radiant[0]+len(senate))
 		} else {
-			dire = append(dire, dire[0]+len(senate))
+			dire = append(dire, dire[0] + len(senate))
 		}
 		radiant = radiant[1:]
 		dire = dire[1:]
@@ -32,6 +32,6 @@ func predictPartyVictory(senate string) string {
 	return "R"
 }
 func TestFunc649(t *testing.T) {
-	res := predictPartyVictory("RD")
+	res := predictPartyVictory("RDD")
 	fmt.Println(res)
 }
