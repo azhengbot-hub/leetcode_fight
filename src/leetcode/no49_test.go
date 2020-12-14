@@ -6,6 +6,7 @@ import (
 )
 
 func groupAnagrams(strs []string) [][]string {
+	// 给字符串排序
 	// mp := map[string][]string{}
 	// for _, str := range strs {
 	// 	s := []byte(str)
