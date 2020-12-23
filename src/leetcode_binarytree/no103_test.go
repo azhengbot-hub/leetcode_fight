@@ -1,17 +1,18 @@
-package binary_tree_test
+package binarytree_test
 
 import (
 	"fmt"
+	binarytree "leetcode/src/leetcode_binarytree"
 	"testing"
 )
 
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
+// type TreeNode struct {
+// 	Val   int
+// 	Left  *TreeNode
+// 	Right *TreeNode
+// }
 
-func zigzagLevelOrder(root *TreeNode) [][]int {
+func zigzagLevelOrder(root *binarytree.TreeNode) [][]int {
 
 	var res [][]int
 
@@ -19,7 +20,7 @@ func zigzagLevelOrder(root *TreeNode) [][]int {
 		return res
 	}
 
-	treeNodeList := []*TreeNode{root}
+	treeNodeList := []*binarytree.TreeNode{root}
 
 	for i := 0; len(treeNodeList) > 0; i++ {
 		lenTreeNodeList := len(treeNodeList)
@@ -83,23 +84,23 @@ func zigzagLevelOrder(root *TreeNode) [][]int {
 }
 func TestFunc103(t *testing.T) {
 
-	var root *TreeNode
+	var root *binarytree.TreeNode
 	// [3,9,20,null,null,15,7],
-	root = &TreeNode{
+	root = &binarytree.TreeNode{
 		Val: 3,
-		Left: &TreeNode{
+		Left: &binarytree.TreeNode{
 			Val:   9,
 			Left:  nil,
 			Right: nil,
 		},
-		Right: &TreeNode{
+		Right: &binarytree.TreeNode{
 			Val: 20,
-			Left: &TreeNode{
+			Left: &binarytree.TreeNode{
 				Val:   15,
 				Left:  nil,
 				Right: nil,
 			},
-			Right: &TreeNode{
+			Right: &binarytree.TreeNode{
 				Val:   7,
 				Left:  nil,
 				Right: nil,
