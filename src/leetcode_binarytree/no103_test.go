@@ -84,31 +84,31 @@ func zigzagLevelOrder(root *binarytree.TreeNode) [][]int {
 }
 func TestFunc103(t *testing.T) {
 
-	var root *binarytree.TreeNode
-	// [3,9,20,null,null,15,7],
-	root = &binarytree.TreeNode{
-		Val: 3,
-		Left: &binarytree.TreeNode{
-			Val:   9,
-			Left:  nil,
-			Right: nil,
-		},
-		Right: &binarytree.TreeNode{
-			Val: 20,
-			Left: &binarytree.TreeNode{
-				Val:   15,
-				Left:  nil,
-				Right: nil,
-			},
-			Right: &binarytree.TreeNode{
-				Val:   7,
-				Left:  nil,
-				Right: nil,
-			},
-		},
-	}
+	// var root *binarytree.TreeNode
+	// // [3,9,20,null,null,15,7],
+	// root = &binarytree.TreeNode{
+	// 	Val: 3,
+	// 	Left: &binarytree.TreeNode{
+	// 		Val:   9,
+	// 		Left:  nil,
+	// 		Right: nil,
+	// 	},
+	// 	Right: &binarytree.TreeNode{
+	// 		Val: 20,
+	// 		Left: &binarytree.TreeNode{
+	// 			Val:   15,
+	// 			Left:  nil,
+	// 			Right: nil,
+	// 		},
+	// 		Right: &binarytree.TreeNode{
+	// 			Val:   7,
+	// 			Left:  nil,
+	// 			Right: nil,
+	// 		},
+	// 	},
+	// }
 
-	res := zigzagLevelOrder(root)
+	res := zigzagLevelOrder(binarytree.Root)
 
 	fmt.Println(res)
 }
