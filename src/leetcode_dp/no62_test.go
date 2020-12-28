@@ -1,6 +1,7 @@
-package leetcode_test
+package leetcode_dp_test
 
 import (
+	"fmt"
 	"testing"
 )
 
@@ -24,5 +25,6 @@ func uniquePaths(m int, n int) int {
 }
 
 func TestFunc(t *testing.T) {
-	uniquePaths(3, 7)
+	res := uniquePaths(3, 7)
+	fmt.Println(res)
 }
