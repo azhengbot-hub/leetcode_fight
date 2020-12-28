@@ -29,11 +29,10 @@ func maxProfit188(k int, prices []int) int {
 	haveStock[0][0] = -prices[0]
 	noStock[0][0] = 0
 
-	for i := 1; i < k; i++ {
+	for i := 1; i <= k; i++ {
 		haveStock[0][i] = math.MinInt64 / 2
 		noStock[0][i] = math.MinInt64 / 2
 	}
-
 	for i := 1; i < n; i++ {
 		haveStock[i][0] = max(haveStock[i-1][0], noStock[i-1][0]-prices[i])
 		for j := 1; j <= k; j++ {
@@ -41,8 +40,6 @@ func maxProfit188(k int, prices []int) int {
 			noStock[i][j] = max(noStock[i-1][j], haveStock[i-1][j-1]+prices[i])
 		}
 	}
-	fmt.Println(haveStock)
-	fmt.Println(noStock)
 	return maxList(noStock[n-1]...)
 }
 
