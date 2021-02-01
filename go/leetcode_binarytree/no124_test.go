@@ -1,7 +1,7 @@
 package binarytree_test
 
 import (
-	binarytree "leetcode/src/leetcode_binarytree"
+	binarytree "leetcode/go/leetcode_binarytree"
 	"testing"
 )
 
