@@ -20,10 +20,10 @@ class Solution:
         pre = None
         cur = head
         while cur:
-            temp = cur.next  # 先把原来cur.next位置存起来
+            next = cur.next  # 先把原来cur.next位置存起来
             cur.next = pre
             pre = cur
-            cur = temp
+            cur = next
         return pre
 
 
